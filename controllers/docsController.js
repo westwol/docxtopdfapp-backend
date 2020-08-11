@@ -6,9 +6,9 @@ docsController.upload = async(req, res, next) => {
     try {
         const { file } = req.files;
         // Verify file extension
-        if (file.mimetype !== 'application/msword' || file.mimetype !== 'application/pdf') {
+        /*if (file.mimetype !== 'application/msword') {
             throw new Error('El archivo seleccionado no es de tipo Word MS.');
-        }
+        }*/
         // Verify fileSize (default: 20MB)
         if (file.size > 20 * 1000 * 1000) {
             throw new Error('El archivo seleccionado no puede pesar más de 20MB.');
